@@ -38,6 +38,7 @@ function App() {
 
   return (
     <>
+    <h2>hello</h2>
       <AddProduct
         title={title}
         setTitle={setTitle}
