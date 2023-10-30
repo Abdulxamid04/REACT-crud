@@ -4,6 +4,8 @@ import './App.css'
 import AddProduct from './components/AddProduct'
 import { uid } from 'uid';
 import Products from './components/Products';
+import Home from './pages/Home';
+import { Route, Routes } from 'react-router-dom';
 
 const getLocalStorage = () => {
   return localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) : [];
@@ -43,17 +45,19 @@ function App() {
   }
   return (
     <>
+    <Header/>
     <Routes>
-      <Header/>
-      <Route path='./components/Products.jsx' element={<Products/>}>Products</Route>
-      <AddProduct
-        title={title}
-        setTitle={setTitle}
-        price={price}
-        setPrice={setPrice}
-        handleSubmit={handleSubmit}
+      <Route path="/" element={<Home />} /> 
+      <Route path="/product" element={<Products list={list} />} /> 
+      <Route path="/AddProduct" element={<AddProduct
+       title={title}
+       setTitle={setTitle}
+       price={price}
+       setPrice={setPrice}
+       handleSubmit={handleSubmit}/>}></Route>
+       <AddProduct
       />
-      <Products list={list} removeItem={removeItem} />
+      <Products list={list} removeItem={removeItem} /> 
     </Routes>
       
      </>
