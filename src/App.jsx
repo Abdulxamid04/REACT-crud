@@ -36,9 +36,16 @@ function App() {
     localStorage.setItem('products', JSON.stringify(list));
   }, [list]);
 
+  const handleLogin = (e) => {
+    e.preventDefault()
+    const newItem = {name: name}
+    setUser(newItem)
+  }
   return (
     <>
-    <h2>hello</h2>
+    <Routes>
+      <Header/>
+      <Route path='./components/Products.jsx' element={<Products/>}>Products</Route>
       <AddProduct
         title={title}
         setTitle={setTitle}
@@ -47,6 +54,8 @@ function App() {
         handleSubmit={handleSubmit}
       />
       <Products list={list} removeItem={removeItem} />
+    </Routes>
+      
      </>
   )
 }
