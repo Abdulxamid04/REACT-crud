@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import { AppProvider } from './contex.jsx'
-import './index.css'
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
@@ -12,5 +10,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
     </AppProvider>
     </BrowserRouter>
-  </React.StrictMode>,
+  </React.StrictMode>
 )

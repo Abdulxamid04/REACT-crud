@@ -1,4 +1,7 @@
-export default function Products({list, removeItem}) {
+import { useGlobalContext } from "../contex"
+
+export default function Products({list, }) {
+    const {removeItem} = useGlobalContext()
   return (
       <div>
           {list.map((item) => {

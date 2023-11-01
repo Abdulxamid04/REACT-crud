@@ -1,10 +1,9 @@
-export default function AddProduct({
-    title,
-    setTitle,
-    price,
-    setPrice,
-    handleSubmit
-}) {
+import { useGlobalContext } from "../contex"
+
+export default function AddProduct() {
+
+
+    const {title, setTitle, price, setPrice, handleSubmit} = useGlobalContext();
     
 
   return (

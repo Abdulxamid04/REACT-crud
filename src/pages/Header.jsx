@@ -6,7 +6,7 @@ export default function Header() {
         <div>
             <Link to="/">Home</Link>
             <Link to="./Products.jsx">Products</Link>
-            <Link to='/components/Admin.jsx'>Admin</Link>
+            <Link to='/Admin.jsx'>Admin</Link>
             <Link to="./main.jsx">main</Link>
         </div>
     </div>
