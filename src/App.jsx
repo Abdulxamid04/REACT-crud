@@ -6,6 +6,7 @@ import { uid } from 'uid';
 import Products from './components/Products';
 import Home from './pages/Home';
 import { Route, Routes } from 'react-router-dom';
+import Header from './pages/Header';
 
 const getLocalStorage = () => {
   return localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) : [];
@@ -55,10 +56,8 @@ function App() {
        price={price}
        setPrice={setPrice}
        handleSubmit={handleSubmit}/>}></Route>
-       <AddProduct
-      />
-      <Products list={list} removeItem={removeItem} /> 
     </Routes>
+    <Products list={list} removeItem={removeItem} /> 
       
      </>
   )
